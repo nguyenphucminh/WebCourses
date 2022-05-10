@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="f" action="#" method="post" onsubmit="confirmForm(CheckForm)">
+		<table style="border: 0; align-content: center;">
+			<tr>
+				<td>Tên đăng nhập:</td>
+				<td><input type="text" name="txtTDN" /> (nhiều hơn 6 ký tự)</td>
+			</tr>
+			<tr>
+				<td>Mật khẩu:</td>
+				<td><input type="password" name="txtMK" /></td>
+			</tr>
+			<tr>
+				<td>Xác nhận mật khẩu:</td>
+				<td><input type="password" name="txtXNMK" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="align-content: center;">
+					<input type="submit" name="btnDN" value="OK"  />
+					<input type="reset" value="Hủy"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	
+	<script>
+		
+		function confirmForm(callback,event)
+		{
+			const form = document.querySelector('f')
+			if(CheckForm()==false)
+			{
+				form.addEventListener('submit', event => 
+				{
+					event.preventDefault();
+					return callback;
+				})
+			}
+
+		}
+
+		function CheckForm(){
+		var TDN =  document.getElementsByName("txtTDN")[0].value;
+		var MK = document.getElementsByName("txtMK")[0].value;
+		var XNMK = document.getElementsByName("txtXNMK")[0].value;
+			if( TDN == '' || MK == '' || XMNK =='')
+			{
+				alert("Không Bỏ Trống");
+				return false;
+
+			}
+			if(TDN.length < 6)
+			{
+				alert("Tên Đăng Nhập Nhiều Hơn 6 Ký Tự");
+				return false;	
+			}
+			if(MK != XNMK)
+			{
+				alert("Xác Nhận Mật Khẩu Sai");
+				return false;
+			}
+			else
+			{
+
+				return "FOMR CHUAN"
+			}
+
+		}
+	</script>
+</body>

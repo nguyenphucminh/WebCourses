@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemTraEmail(the_email) {
+          var acong = the_email.indexOf("@");
+          var daucham = the_email.lastIndexOf(".");
+          var khoangtrang = the_email.indexOf(" ");
+          if ((acong < 1) || (daucham < acong + 1) || (daucham == the_email.length - 1) || (khoangtrang != -1))
+          {                         
+            alert("Email không hợp lệ");
+            return false;
+          } 
+          else {
+            alert("Email đúng");
+            return true;
+          }
+        } 
+      </script>
+      <form action="#" method="POST" name="f" onsubmit="kiemTraEmail(f.emailbox.value);">
+        <input type="text" name="emailbox" value="" placeholder="Nhập email">
+        <input type="submit" value="Gửi" />
+      </form>
+</body>
+</html>

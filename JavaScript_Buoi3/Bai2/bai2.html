@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f"> CHOOSE THEME: 
+        <select name="optionMN" onclick="document.bgColor=f.optionMN.value">
+        <script>
+            var mau = new Array('white','blue','red','yellow','pink');
+            for(var i in mau)
+            {
+                document.write(`<option value ="${mau[i]}">${mau[i]}</option>`)
+            }
+        </script>
+        </select>
+    </form>
+</body>
+</html>

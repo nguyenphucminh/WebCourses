@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var time = new Date();
+        const GetDay = (time) =>
+        {
+            if(time.getDay() == 0)
+            {
+                return "Chủ Nhật";
+            }
+            else
+            {
+                for(var i=1;i<=6;i++)
+                {
+                    if(time.getDay() == i)
+                    {
+                        return `Thứ ${i+1}`;
+                    }
+                }
+            }
+        }
+        const GetTime = (time) =>
+        {
+            var suffix = time.getHours() >= 12 ? "Chiều":"Sáng";
+            return `${(time.getHours() + 11) % 12 + 1}: ${time.getMinutes()}: ${time.getSeconds()} ${suffix} `
+        }
+        document.write(`${GetTime(time)}, ${GetDay(time)}, Ngày ${time.getDate()}, Tháng ${time.getMonth()}, Năm ${time.getFullYear()}`)
+
+    </script>
+</body>
+</html>

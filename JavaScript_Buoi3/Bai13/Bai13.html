@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+
+	</head>
+	<body>
+		<form name="formx"> 			
+			<p><input type="text" size="10" value="12" name="a"><br> 
+			<input type="text" size="10" value="3" name="b"><br>
+			<input type="button" value="  +" onClick="a_plus_b(this.form)"> &nbsp;&nbsp;
+			<input type="button" value="  -  " onClick="a_minus_b(this.form)"> <br>
+			<input type="button" value="  x  " onClick="a_times_b(this.form)"> &nbsp;&nbsp;
+			<input type="button" value="/  " onClick="a_div_b(this.form)"> <br>
+			<input type="button" value="  ^  " onClick="a_pow_b(this.form)"><br>
+			Kết quả <input type="text" value="0" name="ans" size="9"> </p> 
+		</form> 
+		<script type="text/javascript">
+			function a_plus_b(form){
+				a= eval(form.a.value);
+				b = eval(form.b.value);
+				c=a+b;
+				form.ans.value=c;
+			}
+
+			function a_minus_b(form){
+				a= eval(form.a.value);
+				b = eval(form.b.value);
+				c=a-b;
+				form.ans.value=c;
+			}
+			function a_times_b(form){
+				a= eval(form.a.value);
+				b = eval(form.b.value);
+				c=a*b;
+				form.ans.value=c;
+			}
+			function a_div_b(form){
+				a= eval(form.a.value);
+				b = eval(form.b.value);
+				c=a/b;
+				form.ans.value=c;
+			}
+			function a_pow_b(form){
+				a= eval(form.a.value);
+				b = eval(form.b.value);
+				c=Math.pow(a,b);
+				form.ans.value=c;
+			}
+		</script>		
+	</body>
+</html>

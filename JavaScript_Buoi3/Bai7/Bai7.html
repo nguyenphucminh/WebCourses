@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="f">
+		<table style="border: 0;" cellpadding="5" cellspacing="0" width="498">
+			<tr>
+				<td colspan="2" style="align-content: center;">THÔNG TIN ỨNG VIÊN </td>
+			</tr>
+			<tr>
+				<td>Họ tên</td>
+				<td><input type="text" size="28" name="txtHoTen"/></td>
+			</tr>
+			<tr>
+				<td>Năm sinh</td>
+				<td>	
+				<select name="optNamSinh">
+					<script>
+					var d = new Date();
+					for (i=d.getFullYear(); i>=1950; i--)
+					{
+						document.write('<option value="' + i + '">' + i + '</option>');
+					}
+					</script>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới tính</td>
+				<td>
+					<input type="radio" name="radGioiTinh" value="Nam" checked="true"/>Nam 
+					<input type="radio" name="radGioiTinh" value="Nữ"/>Nữ
+				</td>
+			</tr>
+			<tr>
+				<td>Mức lương đề nghị</td>
+				<td><input type="text" name="txtMucLuong"></td>
+			</tr>
+			<tr>
+				<td>Hình thức làm việc</td>
+				<td>
+					<input type="checkbox" name="chkHinhThucToanTG" value="Toàn thời gian"/>Toàn thời gian 
+					<input type="checkbox" name="chkHinhThucBanTG" value="Bán thời gian"/>Bán thời gian
+				</td>
+			</tr>
+			<tr>
+				<td>Thông tin khác</td>
+				<td><textarea rows="4" cols="25" name="txtThongTin"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="align-content: center" >
+					<input type="button" value="Gửi" onclick="kiemtraform();"/> 
+					<input type="reset" value="Xóa"/>
+				</td>
+			</tr>	
+		</table>
+		<script>
+
+
+		function kiemtraform()
+		{
+		var Ten =  document.getElementsByName("txtHoTen")[0].value;
+		var NamSinh = document.getElementsByName("optNamSinh")[0].value;
+
+		var MucLuong = document.getElementsByName("txtMucLuong")[0].value;
+		var ThongTin = document.getElementsByName("txtThongTin")[0].value;
+			if(Ten ='')
+			{
+				alert("Tên Sai")
+				Ten.focus();
+				return false;
+			}
+			var time = new Date()
+			if(time.getFullYear() - NamSinh > 16)
+			{
+				alert("Tuổi Không Hợp Lệ")
+				NamSinh.focus();
+				return false;
+			}
+			if(f.chkHinhThucBanTG.checked ==false && f.chkHinhThucToanTG.checked == false)
+			{
+				alert("Chọn Ít Nhất 1 Hình Thưc")
+				return false;
+			}
+			if(isNaN(MucLuong)==true)
+			{
+				alert("Phải là số")
+				MucLuong.focus();
+				return false
+			}
+			ShowInfo();
+			return true;
+		}
+		function ShowInfo()
+		{
+			var Ten =  document.getElementsByName("txtHoTen")[0].value;
+		var NamSinh = document.getElementsByName("optNamSinh")[0].value;
+
+		var MucLuong = document.getElementsByName("txtMucLuong")[0].value;
+		var ThongTin = document.getElementsByName("txtThongTin")[0].value;
+
+			var csmoi = window.open('');
+			csmoi.document.write("Thanks you for writting")
+			csmoi.document.write(`</br>Họ Tên :${Ten}`)
+			csmoi.document.write(`</br>Năm Sinh : ${NamSinh}`)
+			csmoi.document.write(`</br>Giới Tính: `)
+			if((f.radGioiTinh[0].checked==true))
+			{
+				csmoi.document.write(f.radGioiTinh[0].value);
+			}		
+			else
+			{
+				csmoi.document.write(f.radGioiTinh[1].value);
+			}
+			csmoi.document.write(`</br>Mức Lương:${MucLuong}`)
+			csmoi.document.write(`</br>hình Thức`)
+			if((f.chkHinhThucToanTG.checked==true))
+			{
+				csmoi.document.write(f.chkHinhThucToanTG.value);
+			}		
+			if((f.chkHinhThucBanTG.checked==true))
+			{
+				csmoi.document.write(f.chkHinhThucBanTG.value);
+			}
+			csmoi.document.write(`</br>Thông Tin:${ThongTin}`)	
+		}
+		</script>
+		</form>
+</body>
