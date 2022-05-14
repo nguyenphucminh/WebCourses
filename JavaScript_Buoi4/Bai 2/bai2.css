@@ -1,0 +1,103 @@
+#khungtrang
+{
+    width: 1024px;
+    margin:auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    color: darkblue;
+    border: thin darkblue solid;
+    box-shadow: 5px 5px 10px black;
+}
+#phantren
+{
+    height: 100px;
+}
+#cottrai
+{
+    float: left;
+    background-color: #3579cf;
+    height: 600px;
+    width: 160px;
+}
+a.menu
+{
+    text-decoration: none;
+    background-color: white;
+    border: thin dotted darkblue;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+}
+.menutext
+{
+    align-content: center;
+    font-style: bold;
+    font-size: 10pt;
+    color: aliceblue;
+}
+a.menu:hover
+{
+    color: lavender;
+    border: thin solid magenta;
+}
+#cotgiua
+{
+    float: left;
+    width: 500px;
+}
+table.bieumau
+{
+    width: 450px;
+    border:0;
+    margin: auto;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+    color:#330099;
+}
+#cotphai
+{
+    float: left;
+    width: 350px;
+}
+.thongbao
+{
+    border: thin solid silver;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    background: url('module_bg.JPG');
+    background-repeat:repeat-x ;
+    margin: 5px;
+    padding: 5px;
+}
+.tieude
+{
+    text-decoration:solid 2px black; ;
+    float:left;
+    font-weight: bold ;
+ 
+}
+.ngaydang
+{
+    text-align: right;
+    color: silver;
+    font-size: 8pt;
+}
+.noidung
+{
+    text-align: justify;
+}
+.email
+{
+    text-align: right;
+    font-style: italic;
+    font-size: 8pt;
+}
+#phanduoi
+{
+    height: 40px;
+    text-align: center;
+    border: 8px solid #3579cf;
+    clear:both;
+}

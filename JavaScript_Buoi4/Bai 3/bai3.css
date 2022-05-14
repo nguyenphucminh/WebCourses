@@ -1,0 +1,63 @@
+body{
+    background-color: silver;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#khungtrang
+{
+    width: 804px;
+    max-width: 100%;
+    background-color: white;
+    margin: auto;
+    font-size: 11pt;
+}
+#phantren
+{
+    height: 100px;
+    background: url('hinhanh/banner.jpg');
+}
+#phanmenungang
+{
+    height: 25px;
+    background-color: #009933 ;
+    text-align: center;
+    color: aliceblue;
+}
+#phantrai
+{
+    width: 150px;
+    border: solid thin #009933;
+}
+.khungmenu
+{
+    padding: 5px;
+}
+.tieudemenu
+{
+    font-weight: bold;
+    text-align: center;
+    color: #009933;
+    text-decoration: dashed thin #009933;
+}
+.menu 
+{
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.menu:hover
+{
+    color: black;
+}
+#phangiua
+{
+    float: left;
+    width: 500px;
+
+}
+#phanphai
+{
+
+}
