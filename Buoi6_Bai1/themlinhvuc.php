@@ -5,7 +5,7 @@
 	<?php
 		$servername = 'localhost';
 		$username = 'root';
-		$password = 'abc123';
+		$password = '';
 		$dbname = 'quanly_tin';
 
 		$malv = $_POST['txtMaLinhVuc'];
